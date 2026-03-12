@@ -122,22 +122,20 @@ function initPricePopup() {
     
     const closeBtn = popup.querySelector('.price-popup-close');
     const overlay = popup.querySelector('.price-popup-overlay');
-    const priceCards = document.querySelectorAll('.price-card');
+    const priceTable = document.querySelector('.price-table-container');
     
-    if (priceCards.length === 0) {
-        console.error('Price cards not found');
+    if (!priceTable) {
+        console.error('Price table not found');
         return;
     }
     
-    // 为每个价格卡片添加点击事件
-    priceCards.forEach(card => {
-        card.style.cursor = 'pointer';
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            popup.classList.add('show');
-            document.body.classList.add('no-scroll');
-        });
+    // 为价格表格添加点击事件
+    priceTable.style.cursor = 'pointer';
+    priceTable.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        popup.classList.add('show');
+        document.body.classList.add('no-scroll');
     });
     
     // 关闭按钮点击事件
@@ -284,7 +282,7 @@ function initRedeemPopup() {
 
 // 更新价格
 function updatePrices(discount) {
-    const priceElements = document.querySelectorAll('.price.highlight-price');
+    const priceElements = document.querySelectorAll('.price-table td:last-child');
     
     priceElements.forEach(element => {
         const currentPrice = element.textContent;

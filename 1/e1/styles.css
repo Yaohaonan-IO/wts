@@ -108,32 +108,7 @@ body {
     box-shadow: var(--shadow-xl);
 }
 
-.logo {
-    font-size: clamp(1.4rem, 5vw, 2.2rem);
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: clamp(1.2rem, 3vw, 1.8rem);
-    letter-spacing: 1px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-    z-index: 1;
-}
 
-.logo::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-    border-radius: 2px;
-}
 
 /* 导航栏样式 */
 .nav {
@@ -185,7 +160,7 @@ body {
 .main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: clamp(1rem, 3vw, 2rem);
+    padding: clamp(2rem, 3vw, 2rem) clamp(2rem, 3vw, 2rem) clamp(3rem, 5vw, 4rem);
     position: relative;
     z-index: 10;
 }
@@ -193,18 +168,19 @@ body {
 /* 章节样式 */
 .section {
     background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
-    margin-bottom: 2rem;
+
     padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: clamp(2rem, 5vw, 3rem);
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-lg), 0 0 30px rgba(30, 64, 175, 0.1);
     transition: var(--transition);
-    border: 1px solid rgba(30, 64, 175, 0.2);
+    border: 2px solid rgb(101, 101, 101);
     position: relative;
     overflow: hidden;
 }
 
 #overview {
-    margin-top: clamp(8rem, 20vw, 10rem);
+    margin-top: clamp(0rem, 20vw, 10rem);
 }
 
 
@@ -215,7 +191,7 @@ body {
     font-weight: 800;
     margin-bottom: clamp(1.2rem, 3vw, 1.8rem);
     padding-bottom: clamp(0.6rem, 2vw, 1rem);
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 1.4px solid var(--primary-color);
     position: relative;
     display: inline-block;
     letter-spacing: 0.5px;
@@ -256,7 +232,6 @@ body {
     background: var(--secondary-gradient);
     border-radius: 2px;
     margin-right: clamp(0.6rem, 2vw, 1rem);
-    box-shadow: 0 2px 8px rgba(17, 153, 142, 0.3);
 }
 
 .content h4 {
@@ -350,21 +325,7 @@ body {
     font-size: clamp(1.1rem, 3.5vw, 1.3rem);
 }
 
-/* 高亮结论样式 */
-.highlight-conclusion {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    color: #1a1a2e;
-    font-size: clamp(1rem, 3.5vw, 1.3rem);
-    font-weight: 800;
-    padding: clamp(1rem, 3vw, 1.5rem) clamp(2rem, 5vw, 3rem);
-    margin: clamp(1.2rem, 3.5vw, 1.8rem) 0;
-    border-radius: var(--border-radius-md);
-    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
-    text-align: center;
-    border: 3px solid rgba(255, 255, 255, 0.8);
-    position: relative;
-    overflow: hidden;
-}
+
 
 /* 诗意思考样式 */
 .poetic-conclusion {
@@ -716,6 +677,11 @@ body {
     border-left: 4px solid var(--primary-color);
 }
 
+.location-name {
+    color: #EF4444;
+    font-weight: 800;
+}
+
 .price-options {
     display: flex;
     flex-direction: column;
@@ -777,6 +743,58 @@ body {
     top: 0;
 }
 
+/* 价格表格样式 */
+.price-table-container {
+    margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
+    border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.price-table th {
+    background: var(--primary-gradient);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    letter-spacing: 0.5px;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    text-align: left;
+}
+
+.price-table td {
+    padding: clamp(1rem, 3vw, 1.5rem);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.price-table tr:last-child td {
+    border-bottom: none;
+}
+
+.price-table tr:hover {
+    background-color: rgba(30, 64, 175, 0.05);
+}
+
+.price-table td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.price-table td:last-child {
+    font-weight: 800;
+    color: var(--accent-color);
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+}
 
 .notice {
     text-align: center;
@@ -865,49 +883,19 @@ body {
     margin-bottom: 0;
 }
 
-/* 承诺样式 */
-.commitment {
-    background: linear-gradient(145deg, #e8f5e9 0%, #d4edda 100%);
-    color: #155724;
-    padding: clamp(1.2rem, 3vw, 1.8rem);
-    border-radius: var(--border-radius-md);
-    border-left: 5px solid #4caf50;
-    margin-top: clamp(1.2rem, 3vw, 1.8rem);
-    font-weight: 700;
-    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-    line-height: 1.7;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-    cursor: default;
-}
 
-.commitment::before {
-    content: '💪';
-    position: absolute;
-    top: clamp(0.8rem, 2vw, 1.2rem);
-    right: clamp(0.8rem, 2vw, 1.2rem);
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
-    opacity: 0.2;
-    transition: var(--transition);
-}
 
 /* 页脚样式 */
 .footer {
-    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    background: linear-gradient(180deg, #0e063b 0%, #0f50d1 100%);
     color: #e2e8f0;
     text-align: center;
-    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.5rem);
+    padding: clamp(0rem, 4vw, 2.5rem) clamp(0rem, 3vw, 1.5rem);
     font-size: clamp(0.9rem, 2.5vw, 1rem);
-    margin-top: clamp(2rem, 5vw, 3rem);
-    border-top: 1px solid var(--border-color);
+    margin-top: clamp(0rem, 0vw, 0rem);
 }
 
-.footer p {
-    margin: 0;
-    opacity: 0.9;
-}
+
 
 
 

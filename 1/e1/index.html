@@ -80,7 +80,6 @@
     </div>
     
     <header class="header">
-        <h1 class="logo">五台山精品小团</h1>
         <nav class="nav">
             <a href="#information" class="nav-link"><span>信息差</span></a>
             <a href="#price" class="nav-link"><span>价格明细</span></a>
@@ -102,7 +101,7 @@
             <h2 class="section-title">服务内容</h2>
             <div class="content">
                 <ol>
-                    <li>交通服务：朝台起点鸿门岩至各地接送</li>
+                    <li>交通服务：各地至鸿门岩接送</li>
                     <li>徒步路线：带大家一起走往返北台的一日徒步路线（约7-9h）</li>
                     <li>指导服务：为游客提供基本的路线指引（部分地区无信号，小白有迷路风险）与专业指导</li>
                     <li>物资赠送：赠送户外必要物资</li>
@@ -138,7 +137,7 @@
                     <li>山西忻州市区：3h</li>
                 </ol>
 
-                <p class="highlight-conclusion">因此我们将保定市阜平县作为集散点<br>但我们会视顾客情况在各地灵活发车</p>
+                <p class="truth-statement">因此我们将保定市阜平县作为集散点<br>但我们会视顾客情况在各地灵活发车</p>
 
                 <h3>为什么车程这么长？</h3>
                 <p class="poetic-conclusion"><span>不费脚力无绝色，人稀之地藏风光。</span></p>
@@ -160,89 +159,40 @@
                 <button id="redeem-code-btn" class="redeem-code-btn">🎁 兑换码</button>
             </div>
             <div class="content">
-                <div class="contact-notice">
-                    请至少提前3天开始预定
-                </div>
-                <div class="price-cards">
-                    <div class="price-card scroll-animate-scale">
-                        <h3 class="highlight-text">
-                            石家庄站发车
-                            <span class="excited-emoji">
-                                <img src="https://cdn.jsdelivr.net/npm/openmoji@15.1.0/color/svg/1F929.svg" alt="期待" style="width: 1em; height: 1em; vertical-align: -0.1em; margin-left: 0.2em;">
-                            </span>
-                        </h3>
-                        <div class="price-options">
-                            <div class="price-option">
-                                <span class="passenger-count">后排三人</span>
-                                <span class="price highlight-price">238元/人</span>
-                            </div>
-                            <div class="price-option">
-                                <span class="passenger-count">后排两人</span>
-                                <span class="price highlight-price">307元/人</span>
-                            </div>
-                        </div>
-                        <p class="distance">石家庄站发车 单程约4.3h </p>
-
-                        <h3 class="highlight-text">
-                            保定东站发车
-                            <span class="excited-emoji">
-                                <img src="https://cdn.jsdelivr.net/npm/openmoji@15.1.0/color/svg/1F929.svg" alt="期待" style="width: 1em; height: 1em; vertical-align: -0.1em; margin-left: 0.2em;">
-                            </span>
-                        </h3>
-                        <div class="price-options">
-                            <div class="price-option">
-                                <span class="passenger-count">后排三人</span>
-                                <span class="price highlight-price">246元/人</span>
-                            </div>
-                            <div class="price-option">
-                                <span class="passenger-count">后排两人</span>
-                                <span class="price highlight-price">318元/人</span>
-                            </div>
-                        </div>
-                        <p class="distance">保定东站发车 单程约4.3h </p>
-
-                        <h3 class="highlight-text">
-                            定州东站发车
-                            <span class="excited-emoji">
-                                <img src="https://cdn.jsdelivr.net/npm/openmoji@15.1.0/color/svg/1F929.svg" alt="期待" style="width: 1em; height: 1em; vertical-align: -0.1em; margin-left: 0.2em;">
-                            </span>
-                        </h3>
-                        <div class="price-options">
-                            <div class="price-option">
-                                <span class="passenger-count">后排三人</span>
-                                <span class="price highlight-price">226元/人</span>
-                            </div>
-                            <div class="price-option">
-                                <span class="passenger-count">后排两人</span>
-                                <span class="price highlight-price">291元/人</span>
-                            </div>
-                        </div>
-                        <p class="distance">定州东站发车 单程约4h </p>
-
-                        <h3 class="highlight-text">
-                            阜平县发车    极速上山
-                            <span class="excited-emoji">
-                                <img src="https://cdn.jsdelivr.net/npm/openmoji@15.1.0/color/svg/1F929.svg" alt="期待" style="width: 1em; height: 1em; vertical-align: -0.1em; margin-left: 0.2em;">
-                            </span>
-                        </h3>
-                        <div class="price-options">
-                            <div class="price-option">
-                                <span class="passenger-count">后排三人</span>
-                                <span class="price highlight-price">196元/人</span>
-                            </div>
-                            <div class="price-option">
-                                <span class="passenger-count">后排两人</span>
-                                <span class="price highlight-price">251元/人</span>
-                            </div>
-                        </div>
-                        <p class="distance">阜平县发车 单程约2.5h </p>
-                        
-                    </div>
+                <div class="price-table-container">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>发车地点</th>
+                                <th>价格（后排三人）</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="location-name">石家庄站</span></td>
+                                <td>238元/人</td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-name">保定东站</span></td>
+                                <td>246元/人</td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-name">定州东站</span></td>
+                                <td>226元/人</td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-name">阜平县城</span></td>
+                                <td>196元/人</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class="supplies">
-                    <h3>温馨提示</h3>
-                    <p>视车程合理安排时间<br>已经下单的游客，无需单独购买景区门票<br>提供价值50元的必要物资（无法带走）<br>顾客付款24小时后，无法退单</p>
+                <div class="contact-notice">
+                    温馨提示
+                </div>
+                    <p>档期火爆 请提前7天预定<br>已经下单的游客 无需单独购买景区门票<br>提供价值50元的必要物资（无法带走）<br>顾客付款24小时后 无法退单</p>
                     <h4>以下为免费提供物资</h4>
                     <table class="supplies-table">
                         <tr>
@@ -312,7 +262,7 @@
                     <ul>
                         <li>天气多变：五台山气候复杂多变，台顶温差大，容易出现突发恶劣天气</li>
                         <li>通讯不良：部分区域手机信号弱或无信号，需提前做好沟通</li>
-                        <li>体力消耗：朝台行程较长，对体力要求较高，需合理安排休息</li>
+                        <li>体力消耗：行程较长，对体力要求较高，需合理安排休息</li>
                     </ul>
 
                     <h3>安全建议</h3>
@@ -321,10 +271,9 @@
                         <li>至少携带一个满电充电宝</li>
                         <li>根据自身体力量力而行，身体不适及时停止</li>
                     </ul>
-
-                    <p class="commitment">全程相伴，绝不弃客</p>
                 </div>
             </div>
+
         </section>
 
         <section id="contact" class="section scroll-animate">
