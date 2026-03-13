@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择您的方案</title>
+    <link rel="stylesheet" href="selection.css">
+</head>
+<body>
+    <div class="selection-container">
+        <h1 class="selection-title">请选择您的出行方案</h1>
+        <p class="selection-subtitle">根据您的需求选择最适合的服务方案</p>
+        
+        <div class="options-wrapper">
+            <div class="option-card option-a" onclick="selectOption('a')">
+                <div class="option-header">
+                    <span class="option-badge">A方案</span>
+                    <span class="option-tag">推荐</span>
+                </div>
+                <h2 class="option-title">外包司机型</h2>
+                <div class="option-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🚗</span>
+                        <span>外包司机接送</span>
+                    </div>
+                </div>
+                <div class="option-footer">
+                    <span class="option-price">196元/人起</span>
+                    <span class="option-arrow">→</span>
+                </div>
+            </div>
+            
+            <div class="option-card option-b" onclick="selectOption('b')">
+                <div class="option-header">
+                    <span class="option-badge">B方案</span>
+                    <span class="option-tag premium">尊享</span>
+                </div>
+                <h2 class="option-title">亲自带团型</h2>
+                <div class="option-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">⭐</span>
+                        <span>支持各地发车</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span>亲自带队服务</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🏔️</span>
+                        <span>全程专业指导</span>
+                    </div>
+                </div>
+                <div class="option-footer">
+                    <span class="option-price">价格详见</span>
+                    <span class="option-arrow">→</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="selection.js"></script>
+</body>
+</html>
