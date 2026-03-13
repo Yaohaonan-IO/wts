@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.selection-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.selection-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.selection-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.options-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.option-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.option-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    transition: all 0.4s ease;
+}
+
+.option-a::before {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.option-b::before {
+    background: linear-gradient(90deg, #f093fb, #f5576c);
+}
+
+.option-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.option-card:active {
+    transform: translateY(-4px) scale(1.01);
+}
+
+.option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.option-badge {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.option-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.option-tag.premium {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.option-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.option-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(145deg, #f8fafc 0%, #ffffff 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: linear-gradient(145deg, #f0f4ff 0%, #ffffff 100%);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.feature-item span:last-child {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4a4a68;
+}
+
+.option-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.option-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #667eea;
+}
+
+.option-b .option-price {
+    color: #f5576c;
+}
+
+.option-arrow {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover .option-arrow {
+    transform: translateX(10px);
+}
+
+.option-b .option-arrow {
+    color: #f5576c;
+}
+
+@media (min-width: 768px) {
+    .options-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    .option-card {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .option-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .option-title {
+        font-size: 1.5rem;
+    }
+    
+    .option-price {
+        font-size: 1.3rem;
+    }
+}
